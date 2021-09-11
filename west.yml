@@ -11,6 +11,8 @@ manifest:
       remote: zephyrproject-rtos
       import:
         name-whitelist:
+          - hal_espressif
+          - hal_xtensa
           - net-tools
       revision: main
   self:
