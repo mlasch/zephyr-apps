@@ -4,7 +4,7 @@
 manifest:
   remotes:
     - name: zephyrproject-rtos
-      url-base: https://github.com/zephyrproject-rtos/zephyr/
+      url-base: https://github.com/zephyrproject-rtos
 
   projects:
     - name: zephyr
@@ -12,6 +12,6 @@ manifest:
       import:
         name-whitelist:
           - net-tools
-      revision:
+      revision: main
   self:
     path: zephyr-apps
