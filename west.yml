@@ -1,0 +1,17 @@
+# zephyr-apps manifest
+# author: mlasch@mailbox.org
+
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos/zephyr/
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      import:
+        name-whitelist:
+          - net-tools
+      revision:
+  self:
+    path: zephyr-apps
