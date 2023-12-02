@@ -13,7 +13,9 @@ manifest:
         name-whitelist:
           - hal_espressif
           - hal_xtensa
+          - mbedtls
+          - mcuboot
           - net-tools
-      revision: main
+      revision: b1532ce44914a9c7495d0bd1cdf198ed0e6d1cb8
   self:
     path: zephyr-apps
