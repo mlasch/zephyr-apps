@@ -1,0 +1,7 @@
+menu "Custom lwm2m client"
+
+module "CUSTOM_SERVICES"
+module-str = Custom lwm2m client
+module-help = This is custom lwm2m client help
+
+endmenu
