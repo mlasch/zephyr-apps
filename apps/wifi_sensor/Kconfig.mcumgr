@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: Apache-2.0
+
+config APP_MCUMGR_OTA
+    bool "Enable OTA with mcumgr"
+    help
+        "Enable OTA with mcumgr"
+    select BOOTLOADER_MCUBOOT
+    select MCUMGR
+    select CRC
+    select ZCBOR
+    select NET_SOCKETS
+    select NET_SOCKETS_POSIX_NAMES
+    select MCUMGR_TRANSPORT_UDP
+    select MCUMGR_TRANSPORT_UDP_IPV6
+    select FLASH
+    select STREAM_FLASH
+    select IMG_MANAGER
+    select FLASH_MAP
+    # Features
+    select MCUMGR_GRP_IMG
+    select MCUMGR_GRP_OS
+    select MCUMGR_GRP_SHELL
+    select SHELL_BACKEND_DUMMY
+
+# Stack needs to be > 1024:
+# 0x3ffb0638 smp_udp6                         (real size 2048):	unused 1128	usage  920 / 2048 (44 %)
+config MCUMGR_TRANSPORT_UDP_STACK_SIZE
+    default 2048
+    depends on MCUMGR_TRANSPORT_UDP
+
+config SYSTEM_WORKQUEUE_STACK_SIZE
+    default 2304
