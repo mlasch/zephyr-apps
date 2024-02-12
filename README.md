@@ -27,3 +27,10 @@ OTA flash
 ```
 mcumgr --conntype "udp" --connstring [2a02:168:abcd::1]:1337 reset
 ```
+
+# Zephyr commands
+
+```
+west update
+west blobs fetch hal_espressif
+```
