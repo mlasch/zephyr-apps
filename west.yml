@@ -17,6 +17,6 @@ manifest:
           - mcuboot
           - net-tools
           - zcbor
-      revision: v3.5-branch
+      revision: v3.6.0-rc2
   self:
     path: zephyr-apps
